@@ -118,8 +118,7 @@ export default function CreateContact() {
     </div>
     <div className='form'>
       <button className='saveBtn'>Save</button>
-    </div>
-    
+    </div> 
     </div>
   )
 }
