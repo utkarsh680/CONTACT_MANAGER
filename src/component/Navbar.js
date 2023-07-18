@@ -9,7 +9,6 @@ export default function () {
         <li className={styles.list}>
           <Link to="/">Home</Link>
           <Link to="/create-contact">CreateContact</Link>
-          <Link to = "/contact/:id">ContactDetails</Link>
         </li>
       </ul>
     </div>

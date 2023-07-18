@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "../styles/CreateContact.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope , faUser, faImage, faBuilding, faPhone, faEnvelopeOpen, faCalendarDays} from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope , faUser, faImage, faBuilding, faPhone, faEnvelopeOpen, faCalendarDays, faAddressBook} from '@fortawesome/free-solid-svg-icons'
 
 export default function CreateContact() {
   return (
@@ -73,6 +73,15 @@ export default function CreateContact() {
     </div>
     </div>
     <div className={styles.form}>
+    <FontAwesomeIcon icon={faAddressBook} className={styles.profile}/> 
+     <div>
+     <div className={styles.wrapper}> 
+        <input type='input' id='address' className={styles.formInputAdd}required/> 
+        <label for ='address' >Address</label>
+    </div> 
+    </div>
+    </div>
+    <div className={styles.form}>
     <FontAwesomeIcon icon={faEnvelope} className={styles.profile}/> 
      <div>
      <div className={styles.wrapper}> 
@@ -88,28 +97,6 @@ export default function CreateContact() {
      <select> 
         <option>Home</option>
         <option>Work</option>
-        <option>Other</option>
-        <option>Custom</option>
-      </select>
-    </div> 
-    </div>
-    </div>
-    <div className={styles.form}>
-    <FontAwesomeIcon icon={faCalendarDays} className={styles.profile}/> 
-     <div>
-     <div className={styles.wrapper}> 
-        <input type='date' id='date' className={styles.formInputDate}required/> 
-        <label for ='date' >Singnificant date</label>
-    </div> 
-    </div>
-    </div>
-    <div className={styles.form}>
-     <div>
-     <div className={`${styles.wrapper} ${styles.marginLeft}`}> 
-     <label for ='name' className={styles.formLabelOption}>Label</label>
-     <select> 
-        <option>Birthday</option>
-        <option>Aniversary</option>
         <option>Other</option>
         <option>Custom</option>
       </select>

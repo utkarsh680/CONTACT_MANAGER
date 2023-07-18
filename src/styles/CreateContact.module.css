@@ -149,18 +149,8 @@ border: 2px solid rgb(124, 155, 240);
   margin-left: 32px;
   margin-top: -10px;
 }
-.wrapper input[type="date"]::-webkit-calendar-picker-indicator{
-  filter: invert(1);
-}
-input[type=date]:required:invalid::-webkit-datetime-edit {
-  color: transparent;
-}
-input[type=date]:focus::-webkit-datetime-edit {
-  color: rgb(214, 212, 212) !important;
-}
-.wrapper input[type="date"]{
-  padding-left: 13px;
-}
+
+
 .form .saveBtn{
   margin-top: -6.5rem;
   margin-left: 10rem;
