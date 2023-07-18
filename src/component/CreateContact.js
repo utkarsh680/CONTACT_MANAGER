@@ -5,60 +5,60 @@ import { faEnvelope , faUser, faImage, faBuilding, faPhone, faEnvelopeOpen, faCa
 
 export default function CreateContact() {
   return (
-    <div className='main'>
-    <div className='profileAdd'>
-     <div className='profileImage'> 
-      <FontAwesomeIcon icon={faImage} className='profileImg'/>
+    <div className={styles.main}>
+    <div className={styles.profileAdd}>
+     <div className={styles.profileImage}> 
+      <FontAwesomeIcon icon={faImage} className = {styles.profileImg}/>
      </div>
-     <div className = 'addPicture'>
-        <button className='addBtn'>Add Picture</button>
+     <div className = {styles.addPicture}>
+        <button className={styles.addBtn}>Add Picture</button>
      </div>
     </div>
     
-    <div className='form'>
-    <FontAwesomeIcon icon={faUser} className='profile'/> 
+    <div className={styles.form}>
+    <FontAwesomeIcon icon={faUser} className={styles.profile}/> 
      <div>
-     <div className='wrapper'> 
+     <div className={styles.wrapper}> 
       <input type='text' id='name' className='formInputName' required/>
       <label for ='name' className='formLabel'>First name</label>
     </div> 
     </div>
     
     </div>
-    <div className='form'>
+    <div className={styles.form}>
      <div>
-     <div className='wrapper marginLeft'> 
-      <input type='text' id='name' className='formInputSurname' required/>
-      <label for ='name' className='formLabel'>Surname</label>
+     <div className={`${styles.wrapper} ${styles.marginLeft}`}> 
+      <input type='text' id='sirname' className={styles.formInputSurname} required/>
+      <label for ='sirname' className='formLabel'>Surname</label>
     </div> 
     </div>
     
     </div>
-    <div className='form'>
-    <FontAwesomeIcon icon={faBuilding} className='profile'/> 
+    <div className={styles.form}>
+    <FontAwesomeIcon icon={faBuilding} className={styles.profile}/> 
      <div>
-     <div className='wrapper'> 
-      <input type='text' id='name' className='formInputCompany' required/>
-      <label for ='name' className='formLabel'>Company</label>
+     <div className={styles.wrapper}> 
+      <input type='text' id='company' className='formInputCompany' required/>
+      <label for ='company' className='formLabel'>Company</label>
     </div> 
     </div>
     
     </div>
-    <div className='form'>
-    <FontAwesomeIcon icon={faPhone} className='profile'/> 
+    <div className={styles.form}>
+    <FontAwesomeIcon icon={faPhone} className={styles.profile}/> 
      <div>
-     <div className='wrapper'> 
-      <input type='text' id='name' className='formInputPhone' required/>
-      <label for ='name' className='formLabel'>Phone</label>
+     <div className={styles.wrapper}> 
+      <input type='text' id='phone' className={styles.formInputPhone} required/>
+      <label for ='phone' className='formLabel'>Phone</label>
     </div> 
     </div>
     
     </div>
     
-    <div className='form'>
+    <div className={styles.form}>
      <div>
-     <div className='wrapper marginLeft'> 
-     <label for ='name' className='formLabelOption'>Label</label>
+     <div className={`${styles.wrapper} ${styles.marginLeft}`}> 
+     <label className={styles.formLabelOption}>Label</label>
      <select> 
         <option>Mobile</option>
         <option>Work</option>
@@ -72,19 +72,19 @@ export default function CreateContact() {
     </div> 
     </div>
     </div>
-    <div className='form'>
-    <FontAwesomeIcon icon={faEnvelope} className='profile'/> 
+    <div className={styles.form}>
+    <FontAwesomeIcon icon={faEnvelope} className={styles.profile}/> 
      <div>
-     <div className='wrapper'> 
-      <input type='text' id='name' className='formInputEmail' required/>
-      <label for ='name' className='formLabel'>Email</label>
+     <div className={styles.wrapper}> 
+      <input type='text' id='email' className={styles.formInputEmail} required/>
+      <label for ='email' className={styles.formLabel}>Email</label>
     </div> 
     </div>
     </div>
-    <div className='form'>
+    <div className={styles.form}>
      <div>
-     <div className='wrapper marginLeft'> 
-     <label for ='name' className='formLabelOption'>Label</label>
+     <div className={`${styles.wrapper} ${styles.marginLeft}`}> 
+     <label  className={styles.formLabelOption}>Label</label>
      <select> 
         <option>Home</option>
         <option>Work</option>
@@ -94,30 +94,30 @@ export default function CreateContact() {
     </div> 
     </div>
     </div>
-    <div className='form'>
-    <FontAwesomeIcon icon={faCalendarDays} className='profile'/> 
+    <div className={styles.form}>
+    <FontAwesomeIcon icon={faCalendarDays} className={styles.profile}/> 
      <div>
-     <div className='wrapper'> 
-        <input type='date' id='name' className='formInputDate' required/> 
-        <label for ='name' >Singnificant date</label>
+     <div className={styles.wrapper}> 
+        <input type='date' id='date' className={styles.formInputDate}required/> 
+        <label for ='date' >Singnificant date</label>
     </div> 
     </div>
     </div>
-    <div className='form'>
+    <div className={styles.form}>
      <div>
-     <div className='wrapper marginLeft'> 
-     <label for ='name' className='formLabelOption'>Label</label>
+     <div className={`${styles.wrapper} ${styles.marginLeft}`}> 
+     <label for ='name' className={styles.formLabelOption}>Label</label>
      <select> 
         <option>Birthday</option>
         <option>Aniversary</option>
         <option>Other</option>
-        <option className='active'>Custom</option>
+        <option>Custom</option>
       </select>
     </div> 
     </div>
     </div>
-    <div className='form'>
-      <button className='saveBtn'>Save</button>
+    <div className={styles.form}>
+      <button className={styles.saveBtn}>Save</button>
     </div> 
     </div>
   )
