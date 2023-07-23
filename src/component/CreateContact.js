@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styles from "../styles/CreateContact.module.css";
+import {toast } from 'react-toastify';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Footer from "./Footer";
 import {
   faEnvelope,
   faUser,
@@ -23,8 +26,18 @@ export default function CreateContact() {
   const [zipcode, setZipcode] = useState("");
   const [email, setEmail] = useState("");
   const addContact = () => {
-    if (name === "" || username === "") {
-      // notification
+    if (name === "" || username === "" || company === "" || phone === "" || city === "" || email === "") {
+      toast.warn('Required fileds are followed by *', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+  
       return;
     }
     useContact.addContact({
@@ -43,6 +56,16 @@ export default function CreateContact() {
       email,
       id: Math.random(),
     });
+    toast.success('contact created successfully!',{
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    })
     setName("");
     setUsername("");
     setCompany("");
@@ -75,8 +98,9 @@ export default function CreateContact() {
             />
             <label htmlFor="name" className="formLabel">
               Full Name
-            </label>
-          </div>
+            </label> 
+            <span>*</span>          
+          </div> 
         </div>
       </div>
       <div className={styles.form}>
@@ -93,10 +117,10 @@ export default function CreateContact() {
             <label htmlFor="username" className="formLabel">
               Username
             </label>
+            <span>*</span>
           </div>
         </div>
-      </div>
-
+      </div>  
       <div className={styles.form}>
         <FontAwesomeIcon icon={faEnvelope} className={styles.profile} />
         <div>
@@ -112,6 +136,7 @@ export default function CreateContact() {
             <label htmlFor="email" className={styles.formLabel}>
               Email
             </label>
+            <span>*</span>
           </div>
         </div>
       </div>
@@ -142,6 +167,7 @@ export default function CreateContact() {
                 required
               />
               <label htmlFor="phone">Phone</label>
+              <span>*</span>
             </div>
           </div>
         </div>
@@ -181,6 +207,7 @@ export default function CreateContact() {
               <label htmlFor="company" className={styles.compnayLabel}>
                 Company
               </label>
+              <span>*</span>
             </div>
           </div>
         </div>
@@ -203,6 +230,7 @@ export default function CreateContact() {
               <label htmlFor="address" className={styles.addLabel}>
                 Address
               </label>
+              <span>*</span>
             </div>
           </div>
         </div>
@@ -259,9 +287,7 @@ export default function CreateContact() {
           Save
         </button>
       </div>
-      <footer>
-        
-      </footer>
+      <Footer />
     </div>
   );
 }

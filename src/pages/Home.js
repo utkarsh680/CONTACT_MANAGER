@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Aos from "aos";
 import { useDetails} from "../hooks";
+import {toast } from 'react-toastify';
 
 const Home = () => {
   const userContacts = useDetails();
@@ -14,6 +15,9 @@ const Home = () => {
 
   const onDeleteContact = (id) => {
     userContacts.deleteContact(id);
+    toast.success('Contact deleted successfully!',{
+      autoClose: 2000,
+    })
   }
 
   useEffect(() => {
@@ -75,7 +79,7 @@ const Home = () => {
                     <div className={styles.add}>
                       <div className={styles.addStyle}>User Address</div>
                       <div className={styles.addContent} >{contact.address.suite}, {contact.address.street}</div>
-                      <div className={`${styles.addContent} ${styles.cityZipcode}`}>{contact.address.city}, {contact.address.zipcode}</div>
+                      <div >{contact.address.city}, {contact.address.zipcode}</div>
 
                     </div>
                   </div>
