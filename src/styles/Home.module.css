@@ -1,3 +1,4 @@
+
 .box {
   display: flex;
   flex-wrap: wrap;
@@ -8,7 +9,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.9;
- 
+  background-position: fixed;
+}
+::-webkit-scrollbar{
+  width: 0px;
 }
 
 .contactBox {
@@ -328,10 +332,20 @@
 }
 
 .delete{
-  color: red;
+  color: rgb(228, 112, 112);
   font-size: 1.5rem;
   position: absolute;
-  right: 0;
-  padding: 10px;
-  bottom: -50px;
+  right: 0px;
+  padding: 15px;
+  top: -55px;
+  transition: 0.2s ease ;
+}
+.delete:hover{
+  color: red;
+  transform: scale(1.1);
+  top: -52px;
+}
+
+.cityZipcode{
+  margin-top: -12px;
 }

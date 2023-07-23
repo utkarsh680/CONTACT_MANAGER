@@ -3,7 +3,9 @@ import { UserContext } from "../providers/UserProvider";
 
 export const useDetails = () => {
     return useContext(UserContext);
+    
 }
+console.log('useDetails', useDetails)
 
 export const useProvideDetails = () => {
     const [contacts, setContacts] = useState([]);

@@ -73,8 +73,10 @@ const Home = () => {
                       <FontAwesomeIcon icon={faLocationDot} className={styles.icon3} />
                     </div>
                     <div className={styles.add}>
-                      <div className={styles.addStyle}>User City</div>
-                      <div className={styles.addContent}>{contact.address.city}</div>
+                      <div className={styles.addStyle}>User Address</div>
+                      <div className={styles.addContent} >{contact.address.suite}, {contact.address.street}</div>
+                      <div className={`${styles.addContent} ${styles.cityZipcode}`}>{contact.address.city}, {contact.address.zipcode}</div>
+
                     </div>
                   </div>
                   <div className={styles.companyInformation}>

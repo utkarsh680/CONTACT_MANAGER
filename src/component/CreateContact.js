@@ -13,22 +13,42 @@ import { useDetails } from "../hooks";
 
 export default function CreateContact() {
   const useContact = useDetails();
-  const [firstName, setFirstName] = useState("");
-  const [userName, setUserName] = useState("");
+  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
   const [company, setCompany] = useState("");
   const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [street, setStreet] = useState("");
+  const [suite, setSuite] = useState("");
+  const [zipcode, setZipcode] = useState("");
   const [email, setEmail] = useState("");
   const addContact = () => {
-    useContact.addContact({ 
-      firstName,
-      userName,
-      company,
+    if (name === "" || username === "") {
+      // notification
+      return;
+    }
+    useContact.addContact({
+      name,
+      username,
+      company: {
+        name: company
+      },
       phone,
-      address,
+      address: {
+        city,
+        street,
+        suite,
+        zipcode,
+      },
       email,
       id: Math.random(),
     });
+    setName("");
+    setUsername("");
+    setCompany("");
+    setPhone("");
+    setCity("")
+    setStreet("")
   };
   return (
     <div className={styles.main}>
@@ -37,7 +57,7 @@ export default function CreateContact() {
           <FontAwesomeIcon icon={faImage} className={styles.profileImg} />
         </div>
         <div className={styles.addPicture}>
-          <button className={styles.addBtn}>Add Picture</button>
+          <button className={styles.addBtn}>Add Contact</button>
         </div>
       </div>
 
@@ -49,11 +69,11 @@ export default function CreateContact() {
               type="text"
               id="name"
               className="formInputName"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               required
             />
-            <label for="name" className="formLabel">
+            <label htmlFor="name" className="formLabel">
               Full Name
             </label>
           </div>
@@ -66,49 +86,63 @@ export default function CreateContact() {
               type="text"
               id="username"
               className={styles.formInputSurname}
-              value={userName}
-              onChange={(e) => setUserName(e.target.value)}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               required
             />
-            <label for="username" className="formLabel">
+            <label htmlFor="username" className="formLabel">
               Username
             </label>
           </div>
         </div>
       </div>
+
       <div className={styles.form}>
-        <FontAwesomeIcon icon={faBuilding} className={styles.profile} />
+        <FontAwesomeIcon icon={faEnvelope} className={styles.profile} />
         <div>
           <div className={styles.wrapper}>
             <input
               type="text"
-              id="company"
-              className="formInputCompany"
-              value={company}
-              onChange={(e) => setCompany(e.target.value)}
+              id="email"
+              className={styles.formInputEmail}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <label for="company" className="formLabel">
-              Company
+            <label htmlFor="email" className={styles.formLabel}>
+              Email
             </label>
           </div>
         </div>
       </div>
       <div className={styles.form}>
-        <FontAwesomeIcon icon={faPhone} className={styles.profile} />
         <div>
-          <div className={styles.wrapper}>
-            <input
-              type="text"
-              id="phone"
-              className={styles.formInputPhone}
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              required
-            />
-            <label for="phone" className="formLabel">
-              Phone
-            </label>
+          <div className={`${styles.wrapper} ${styles.marginLeft}`}>
+            <label className={styles.formLabelOption}>Label</label>
+            <select>
+              <option>Home</option>
+              <option>Work</option>
+              <option>Other</option>
+              <option>Custom</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div className={styles.formPhone}>
+        <div className={styles.form}>
+          <FontAwesomeIcon icon={faPhone} className={styles.profile} />
+          <div>
+            <div className={styles.wrapper}>
+              <input
+                type="text"
+                id="phone"
+                className={styles.formInputPhone}
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              />
+              <label htmlFor="phone">Phone</label>
+            </div>
           </div>
         </div>
       </div>
@@ -130,56 +164,104 @@ export default function CreateContact() {
           </div>
         </div>
       </div>
-      <div className={styles.form}>
-        <FontAwesomeIcon icon={faAddressBook} className={styles.profile} />
-        <div>
-          <div className={styles.wrapper}>
-            <input
-              type="input"
-              id="address"
-              className={styles.formInputAdd}
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-              required
-            />
-            <label for="address">City</label>
+      <div className={styles.formCompany}>
+        <div className={styles.form}>
+          <FontAwesomeIcon icon={faBuilding} className={styles.profile} />
+          <div>
+            <div className={styles.wrapper}>
+              <input
+                type="text"
+                id="company"
+                className={styles.formInputCompany}
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
+                required
+                placeholder="Name"
+              />
+              <label htmlFor="company" className={styles.compnayLabel}>
+                Company
+              </label>
+            </div>
           </div>
         </div>
       </div>
-      <div className={styles.form}>
-        <FontAwesomeIcon icon={faEnvelope} className={styles.profile} />
-        <div>
-          <div className={styles.wrapper}>
-            <input
-              type="text"
-              id="email"
-              className={styles.formInputEmail}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <label for="email" className={styles.formLabel}>
-              Email
-            </label>
+
+      <div className={styles.formAddress}>
+        <div className={styles.form}>
+          <FontAwesomeIcon icon={faAddressBook} className={styles.profile} />
+          <div>
+            <div className={styles.wrapper}>
+              <input
+                type="input"
+                id="address"
+                className={styles.formInputAdd}
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+                required
+                placeholder="city"
+              />
+              <label htmlFor="address" className={styles.addLabel}>
+                Address
+              </label>
+            </div>
           </div>
         </div>
       </div>
+
       <div className={styles.form}>
         <div>
           <div className={`${styles.wrapper} ${styles.marginLeft}`}>
-            <label className={styles.formLabelOption}>Label</label>
-            <select>
-              <option>Home</option>
-              <option>Work</option>
-              <option>Other</option>
-              <option>Custom</option>
-            </select>
+            <input
+              type="text"
+              id="street"
+              className={styles.formInputStreet}
+              placeholder="street"
+              required
+              value={street}
+              onChange={(e) => setStreet(e.target.value)}
+            />
           </div>
         </div>
       </div>
       <div className={styles.form}>
-        <button onClick={addContact} className={styles.saveBtn}>Save</button>
+        <div className={styles.address1}>
+          <div className={`${styles.wrapper} ${styles.marginLeft}`}>
+            <input
+              type="text"
+              id="street"
+              className={styles.formInputStreet}
+              placeholder="suite"
+              required
+              value={suite}
+              onChange={(e) => setSuite(e.target.value)}
+            />
+          </div>
+        </div>
       </div>
+      <div className={styles.form}>
+        <div className={styles.address2}>
+          <div className={`${styles.wrapper} ${styles.marginLeft}`}>
+            <input
+              type="text"
+              id="street"
+              className={styles.formInputStreet}
+              placeholder="zipcode"
+              required
+              value={zipcode}
+              onChange={(e) => setZipcode(e.target.value)}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.form}>
+        <button onClick={addContact} className={styles.saveBtn}>
+          Save
+        </button>
+      </div>
+      <footer>
+        
+      </footer>
     </div>
   );
 }

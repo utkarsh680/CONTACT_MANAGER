@@ -13,6 +13,10 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
   
 }
+body{
+  background-color: rgb(25, 26, 25);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -27,29 +31,46 @@ code {
  flex-direction: column;
  justify-content: center;
  row-gap: 2rem;
+ 
+
 }
+
 .form{
  display: -webkit-flex;
  display: -moz-flex;
  display: -ms-flex;
  display: -o-flex;
  display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+
+ 
 }
 .profileAdd{
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 1rem;
   margin-left:30px;
 }
 .wrapper{
   width: 400px;
-  height: 40px;
+  height: 35px;
   position: relative;
- 
+
+}
+.addPictureImage{
+  height: 70px;
+  width: 70px;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.formInputStreet1{
+  position: relative;
+  
 }
 .wrapper input{
   background:transparent;
@@ -63,6 +84,12 @@ position: relative;
   font-size: 16px;
  
 }
+.formInputCity{
+  position:absolute;
+  left: 55%;
+  top: -62px;
+}
+
 .wrapper label{
   position: absolute;
   left: 15px;
@@ -82,6 +109,19 @@ pointer-events: none;
 font-size: 14px;
 }
 
+.wrapper .addLabel{
+  top: -11px;
+  position: absolute;
+  left: 15px;
+  top: -11px;
+  color: rgb(214, 212, 212);
+  text-transform: capitalize;
+  font-size: 14px;
+  transition: top 0.3s ease;
+  padding: 0 5px;
+  background-color: rgb(25, 26, 25);
+}
+
 .wrapper input:focus{
   border: 2px solid rgb(124, 155, 240);
 }
@@ -91,9 +131,23 @@ font-size: 14px;
   margin-right: 10px;
 }
 
+/* form address */
+
+.wrapper .formInputStreet{
+  width: 45%;
+}
+.wrapper .formInputCity{
+  width: 45%;
+}
+.addpos{
+  display: flex;
+  flex-direction: row;  
+}
+
+
 .profileImage{
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background-color: rgba(54, 70, 114, 0.61);
   display: flex;
@@ -101,15 +155,22 @@ font-size: 14px;
   align-items: center;
 }
 .profileImg{
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: rgb(124, 155, 240);
 }
 .addPicture .addBtn{
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: rgb(124, 155, 240);
   border:none;
   cursor: pointer;
   background: transparent;
+  margin-top: 12px;
+}
+
+.wrapper .formInputzipcode{
+  width: 45%;
+  position: relative;
+  top: -155%;
 }
 .wrapper select{
   background:transparent;
@@ -151,8 +212,9 @@ border: 2px solid rgb(124, 155, 240);
 }
 
 
+
 .form .saveBtn{
-  margin-top: -6.5rem;
+  margin-top: -13.3rem;
   margin-left: 10rem;
   width: 90px;
   height: 38px;
@@ -169,4 +231,42 @@ border: 2px solid rgb(124, 155, 240);
 }
 .form .saveBtn:hover{
   background-color: rgb(124, 155, 240);
+}
+
+.emailPosition{
+  display: flex;
+  flex-direction: row;
+  margin-top: -10px;
+}
+
+
+.address1{
+  position: relative;
+  top: -57px;
+  left: 215px;
+}
+.address2{
+  position: relative;
+  top: -60px;
+}
+
+.formCompany{
+  margin-top: -10px;
+}
+.formAddress{
+  margin-top: -6px;
+}
+.wrapper .compnayLabel{
+  position: absolute;
+  left: 15px;
+  top: -11px;
+  color: rgb(214, 212, 212);
+  text-transform: capitalize;
+  font-size: 14px;
+  transition: top 0.3s ease;
+  padding: 0 5px;
+  background-color: rgb(25, 26, 25);
+}
+.formPhone{
+  margin-top: -10px;
 }

@@ -3,6 +3,7 @@ import { useProvideDetails } from "../hooks";
 
 const initialState = {
   user: null,
+  
 };
 
 export const UserContext = createContext(initialState);
