@@ -13,9 +13,7 @@
   justify-content: center;
   margin-top: 40px;
   height: 85%;
-  overflow-y: scroll;
-
-  
+  overflow-y: scroll; 
 }
 ::-webkit-scrollbar {
   width: 0px;
@@ -284,6 +282,7 @@
 .add {
   border-bottom: 1px solid rgba(141, 141, 141, 0.396);
   width: 230px;
+  
 }
 
 .companyInformation {
@@ -352,4 +351,9 @@
 
 .cityZipcode {
   margin-top: -12px;
+}
+.addCity{
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+  margin-top: -15px;
 }

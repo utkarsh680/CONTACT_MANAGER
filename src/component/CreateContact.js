@@ -287,7 +287,7 @@ export default function CreateContact() {
           Save
         </button>
       </div>
-     
+     <Footer/>
     </div>
   );
 }

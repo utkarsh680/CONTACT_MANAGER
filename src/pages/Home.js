@@ -82,7 +82,7 @@ const Home = () => {
                     <div className={styles.add}>
                       <div className={styles.addStyle}>User Address</div>
                       <div className={styles.addContent} >{contact.address.suite}, {contact.address.street}</div>
-                      <div >{contact.address.city}, {contact.address.zipcode}</div>
+                      <div className={styles.addCity}>{contact.address.city}, {contact.address.zipcode}</div>
 
                     </div>
                   </div>
