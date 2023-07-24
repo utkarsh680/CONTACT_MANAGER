@@ -322,7 +322,7 @@ code {
 
 .address1{
   position: relative;
-  top: -57px;
+  top: -53.4px;
   left: 138px;
 }
 .address2{
@@ -340,13 +340,17 @@ code {
 
 }
 
-@media screen and (max-height : 850px){
+@media screen and (max-height : 840px){
   .profileImage{
     display: none;
   }
-  .wrapper{
-    width: 250px;
-    height: 32px;
-    position: relative;
-  }
+.wrapper{
+  width: 250px;
+  height: 32px;
+}
+.address1{
+  position: relative;
+  top: -53.4px;
+  left: 138px;
+}
 }

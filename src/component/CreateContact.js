@@ -303,7 +303,7 @@ export default function CreateContact() {
           Save
         </button>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
