@@ -15,6 +15,7 @@ select:-webkit-autofill:focus {
 }
 body{
   background-color: rgb(25, 26, 25);
+  width: 100vw;
 }
 
 code {
@@ -26,13 +27,11 @@ code {
  display: -moz-flex;
  display: -ms-flex;
  display: -o-flex;
- height: 90vh;
+
  display: flex;
  flex-direction: column;
  justify-content: center;
  row-gap: 2rem;
- 
-
 }
 
 .form{
@@ -44,20 +43,19 @@ code {
  justify-content: center;
  align-items: center;
  position: relative;
-
- 
 }
+
 .profileAdd{
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-left:30px;
 }
+
 .wrapper{
   width: 400px;
   height: 35px;
   position: relative;
-
 }
 .addPictureImage{
   height: 70px;
@@ -83,11 +81,6 @@ code {
   color: rgb(221, 219, 219);
   font-size: 16px;
  
-}
-.formInputCity{
-  position:absolute;
-  left: 55%;
-  top: -62px;
 }
 
 .wrapper label{
@@ -233,13 +226,6 @@ border: 2px solid rgb(124, 155, 240);
   background-color: rgb(124, 155, 240);
 }
 
-.emailPosition{
-  display: flex;
-  flex-direction: row;
-  margin-top: -10px;
-}
-
-
 .address1{
   position: relative;
   top: -57px;
@@ -279,4 +265,104 @@ span{
 }
 
 /* meadia for mobile screen */
+@media screen and (max-width: 527px){
+  body{
+  background-color: rgb(25, 26, 25);
+  width: 100vw;
+  overflow-x: hidden !important;
+}
 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.main{
+ display: -webkit-flex;
+ display: -moz-flex;
+ display: -ms-flex;
+ display: -o-flex;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ row-gap: 2rem;
+}
+
+.form{
+ display: -webkit-flex;
+ display: -moz-flex;
+ display: -ms-flex;
+ display: -o-flex;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+}
+
+.profileAdd{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left:30px;
+}
+
+.wrapper{
+  width: 250px;
+  height: 35px;
+  position: relative;
+}
+
+.formInputStreet1{
+  position: relative; 
+}
+.wrapper input{
+  font-size: 15px; 
+}
+
+.wrapper label{
+  font-size: 15px;
+}
+
+/* form address */
+
+.wrapper .formInputStreet{
+  width: 45%;
+}
+.wrapper .formInputCity{
+  width: 45%;
+}
+.addpos{
+  display: flex;
+  flex-direction: row;  
+}
+
+
+.profileImage{
+  display: none;
+}
+
+.addPicture .addBtn{
+  display: none;
+}
+
+.address1{
+  position: relative;
+  top: -57px;
+  left: 138px;
+}
+.address2{
+  position: relative;
+  top: -60px;
+}
+
+.formCompany{
+  margin-top: -10px;
+}
+.formAddress{
+  margin-top: -6px;
+}
+
+.formPhone{
+  margin-top: -16px;
+}
+
+}
