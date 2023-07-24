@@ -28,9 +28,9 @@ code {
  justify-content: center;
  row-gap: 2rem;
  width: 100%;
- height: 100%;
+ height: 100vh;
  background-color: rgb(25, 26, 25);
- overflow-y: scroll;
+ 
 }
 
 .form{
@@ -329,7 +329,6 @@ code {
   position: relative;
   top: -60px;
 }
-
 
 .formAddress{
   margin-top: -6px;
