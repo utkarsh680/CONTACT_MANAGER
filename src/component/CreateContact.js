@@ -86,6 +86,7 @@ export default function CreateContact() {
   };
   return (
     <div className={styles.main}>
+      
       <div className={styles.profileAdd}>
         <div className={styles.profileImage}>
           <FontAwesomeIcon icon={faImage} className={styles.profileImg} />
@@ -97,132 +98,118 @@ export default function CreateContact() {
       {/* full name input box */}
       <div className={styles.form}>
         <FontAwesomeIcon icon={faUser} className={styles.profile} />
-        <div>
-          <div className={styles.wrapper}>
-            <input
-              type="text"
-              id="name"
-              className="formInputName"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-            <label htmlFor="name" className="formLabel">
-              Full Name
-            </label>
-            <span>*</span>
-          </div>
+        <div className={styles.wrapper}>
+          <input
+            type="text"
+            id="name"
+            className="formInputName"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+          <span>*</span>
+          <label htmlFor="name" className="formLabel">
+            Full Name
+          </label>
         </div>
       </div>
       {/* username input box */}
       <div className={styles.form}>
-        <div>
-          <div className={`${styles.wrapper} ${styles.marginLeft}`}>
-            <input
-              type="text"
-              id="username"
-              className={styles.formInputSurname}
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
-            />
-            <label htmlFor="username" className="formLabel">
-              Username
-            </label>
-            <span>*</span>
-          </div>
+        <div className={`${styles.wrapper} ${styles.marginLeft}`}>
+          <input
+            type="text"
+            id="username"
+            className={styles.formInputSurname}
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+          <label htmlFor="username" className="formLabel">
+            Username
+          </label>
+          <span>*</span>
         </div>
       </div>
       {/* email input box   */}
       <div className={styles.form}>
         <FontAwesomeIcon icon={faEnvelope} className={styles.profile} />
-        <div>
-          <div className={styles.wrapper}>
-            <input
-              type="text"
-              id="email"
-              className={styles.formInputEmail}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <label htmlFor="email" className={styles.formLabel}>
-              Email
-            </label>
-            <span>*</span>
-          </div>
+        <div className={styles.wrapper}>
+          <input
+            type="text"
+            id="email"
+            className={styles.formInputEmail}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <label htmlFor="email" className={styles.formLabel}>
+            Email
+          </label>
+          <span>*</span>
         </div>
       </div>
       <div className={styles.form}>
-        <div>
-          <div className={`${styles.wrapper} ${styles.marginLeft}`}>
-            <label className={styles.formLabelOption}>Label</label>
-            <select>
-              <option>Home</option>
-              <option>Work</option>
-              <option>Other</option>
-              <option>Custom</option>
-            </select>
-          </div>
+        <div className={`${styles.wrapper} ${styles.marginLeft}`}>
+          <label className={styles.formLabelOption}>Label</label>
+          <select>
+            <option>Home</option>
+            <option>Work</option>
+            <option>Other</option>
+            <option>Custom</option>
+          </select>
         </div>
       </div>
       {/* phone input box */}
       <div className={styles.formPhone}>
         <div className={styles.form}>
           <FontAwesomeIcon icon={faPhone} className={styles.profile} />
-          <div>
-            <div className={styles.wrapper}>
-              <input
-                type="text"
-                id="phone"
-                className={styles.formInputPhone}
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                required
-              />
-              <label htmlFor="phone">Phone</label>
-              <span>*</span>
-            </div>
+          <div className={styles.wrapper}>
+            <input
+              type="text"
+              id="phone"
+              className={styles.formInputPhone}
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              required
+            />
+            <label htmlFor="phone">Phone</label>
+            <span>*</span>
           </div>
         </div>
       </div>
       <div className={styles.form}>
-        <div>
-          <div className={`${styles.wrapper} ${styles.marginLeft}`}>
-            <label className={styles.formLabelOption}>Label</label>
-            <select>
-              <option>Mobile</option>
-              <option>Work</option>
-              <option>Home</option>
-              <option>Work fax</option>
-              <option>Home fax</option>
-              <option>Pager</option>
-              <option>Other</option>
-              <option>Custom</option>
-            </select>
-          </div>
+        <div className={`${styles.wrapper} ${styles.marginLeft}`}>
+          <label className={styles.formLabelOption}>Label</label>
+          <select>
+            <option>Mobile</option>
+            <option>Work</option>
+            <option>Home</option>
+            <option>Work fax</option>
+            <option>Home fax</option>
+            <option>Pager</option>
+            <option>Other</option>
+            <option>Custom</option>
+          </select>
         </div>
-      </div>\
+      </div>
       {/* conpany input box */}
       <div className={styles.formCompany}>
         <div className={styles.form}>
           <FontAwesomeIcon icon={faBuilding} className={styles.profile} />
-          <div>
-            <div className={styles.wrapper}>
-              <input
-                type="text"
-                id="company"
-                className={styles.formInputCompany}
-                value={company}
-                onChange={(e) => setCompany(e.target.value)}
-                required
-                placeholder="Name"
-              />
-              <label htmlFor="company" className={styles.compnayLabel}>
-                Company
-              </label>
-              <span>*</span>
-            </div>
+          <div className={styles.wrapper}>
+            <input
+              type="text"
+              id="company"
+              className={styles.formInputCompany}
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
+              required
+              placeholder="Name"
+            />
+            <label htmlFor="company" className={styles.compnayLabel}>
+              Company
+            </label>
+            <span>*</span>
           </div>
         </div>
       </div>
@@ -230,28 +217,27 @@ export default function CreateContact() {
       <div className={styles.formAddress}>
         <div className={styles.form}>
           <FontAwesomeIcon icon={faAddressBook} className={styles.profile} />
-          <div>
-            <div className={styles.wrapper}>
-              <input
-                type="input"
-                id="address"
-                className={styles.formInputAdd}
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-                required
-                placeholder="city"
-              />
-              <label htmlFor="address" className={styles.addLabel}>
-                Address
-              </label>
-              <span>*</span>
-            </div>
+          <div className={styles.wrapper}>
+            <input
+              type="input"
+              id="address"
+              className={styles.formInputAdd}
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              required
+              placeholder="city"
+            />
+            <label htmlFor="address" className={styles.addLabel}>
+              Address
+            </label>
+            <span>*</span>
           </div>
         </div>
       </div>
-     {/* address streen input box */}
-      <div className={styles.form}>
-        <div>
+      {/* address streen input box */}
+
+     
+        <div className={styles.form}>
           <div className={`${styles.wrapper} ${styles.marginLeft}`}>
             <input
               type="text"
@@ -264,23 +250,22 @@ export default function CreateContact() {
             />
           </div>
         </div>
-      </div>
-     {/* address suite input box */}
-      <div className={styles.form}>
-        <div className={styles.address1}>
-          <div className={`${styles.wrapper} ${styles.marginLeft}`}>
-            <input
-              type="text"
-              id="suite"
-              className={styles.formInputStreet}
-              placeholder="suite"
-              required
-              value={suite}
-              onChange={(e) => setSuite(e.target.value)}
-            />
+        {/* address suite input box */}
+        <div className={styles.form}>
+          <div className={styles.address1}>
+            <div className={`${styles.wrapper} ${styles.marginLeft}`}>
+              <input
+                type="text"
+                id="suite"
+                className={styles.formInputStreet}
+                placeholder="suite"
+                required
+                value={suite}
+                onChange={(e) => setSuite(e.target.value)}
+              />
+            </div>
           </div>
         </div>
-      </div>
       {/* address zipcode input box */}
       <div className={styles.form}>
         <div className={styles.address2}>
@@ -298,11 +283,11 @@ export default function CreateContact() {
         </div>
       </div>
       {/* button */}
-      <div className={styles.form}>
+      {/* <div className={styles.form}>
         <button onClick={addContact} className={styles.saveBtn}>
           Save
         </button>
-      </div>
+      </div> */}
       {/* <Footer /> */}
     </div>
   );
