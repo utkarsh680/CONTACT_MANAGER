@@ -229,7 +229,7 @@ border: 2px solid rgb(124, 155, 240);
 }
 
 .formCompany{
-  margin-top: -10px;
+  margin-top: -65px;
 }
 .formAddress{
   margin-top: -6px;
@@ -273,7 +273,6 @@ code {
  width: 90%;
  margin-right: 40px; 
 }
-
 
 .profileAdd{
   display: flex;
@@ -331,9 +330,7 @@ code {
   top: -60px;
 }
 
-.formCompany{
-  margin-top: -10px;
-}
+
 .formAddress{
   margin-top: -6px;
 }
@@ -347,5 +344,10 @@ code {
 @media screen and (max-height : 850px){
   .profileImage{
     display: none;
+  }
+  .wrapper{
+    width: 250px;
+    height: 32px;
+    position: relative;
   }
 }
