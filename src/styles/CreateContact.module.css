@@ -15,7 +15,6 @@ select:-webkit-autofill:focus {
 }
 body{
   background-color: rgb(25, 26, 25);
-  width: 100vw;
 }
 
 code {
@@ -46,6 +45,7 @@ code {
 }
 
 .profileAdd{
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -285,6 +285,9 @@ code {
  flex-direction: column;
  justify-content: center;
  row-gap: 2rem;
+ width: 90%;
+ margin-right: 40px;
+ 
 }
 
 .form{
