@@ -283,11 +283,11 @@ export default function CreateContact() {
         </div>
       </div>
       {/* button */}
-      {/* <div className={styles.form}>
+      <div className={styles.form}>
         <button onClick={addContact} className={styles.saveBtn}>
           Save
         </button>
-      </div> */}
+      </div>
       {/* <Footer /> */}
     </div>
   );
