@@ -30,6 +30,7 @@ code {
  width: 100%;
  height: 100%;
  background-color: rgb(25, 26, 25);
+ overflow-y: scroll;
 }
 
 .form{
@@ -56,15 +57,7 @@ code {
   height: 35px;
   position: relative;
 }
-.addPictureImage{
-  height: 70px;
-  width: 70px;
-  background-color: aliceblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-}
+
 .formInputStreet1{
   position: relative;
   
@@ -276,29 +269,11 @@ code {
     monospace;
 }
 .main{
- display: -webkit-flex;
- display: -moz-flex;
- display: -ms-flex;
- display: -o-flex;
- display: flex;
- flex-direction: column;
- justify-content: center;
  row-gap: 2rem;
  width: 90%;
- margin-right: 40px;
- 
+ margin-right: 40px; 
 }
 
-.form{
- display: -webkit-flex;
- display: -moz-flex;
- display: -ms-flex;
- display: -o-flex;
- display: flex;
- justify-content: center;
- align-items: center;
- position: relative;
-}
 
 .profileAdd{
   display: flex;
@@ -367,4 +342,10 @@ code {
   margin-top: -16px;
 }
 
+}
+
+@media screen and (max-height : 850px){
+  .profileImage{
+    display: none;
+  }
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/CreateContact.module.css";
-import {toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Footer from "./Footer";
@@ -15,7 +15,9 @@ import {
 import { useDetails } from "../hooks";
 
 export default function CreateContact() {
-  const useContact = useDetails();
+  const useContact = useDetails(); //make a const variable for useDetails
+
+  // create useState hook for all input function
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [company, setCompany] = useState("");
@@ -26,8 +28,16 @@ export default function CreateContact() {
   const [zipcode, setZipcode] = useState("");
   const [email, setEmail] = useState("");
   const addContact = () => {
-    if (name === "" || username === "" || company === "" || phone === "" || city === "" || email === "") {
-      toast.warn('Required fileds are followed by *', {
+    // put the condition if input fields are empty
+    if (
+      name === "" ||
+      username === "" ||
+      company === "" ||
+      phone === "" ||
+      city === "" ||
+      email === ""
+    ) {
+      toast.warn("Required fileds are followed by *", {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -36,15 +46,16 @@ export default function CreateContact() {
         draggable: true,
         progress: undefined,
         theme: "dark",
-        });
-  
+      });
+
       return;
     }
+    // here we take all the details from the input
     useContact.addContact({
       name,
       username,
       company: {
-        name: company
+        name: company,
       },
       phone,
       address: {
@@ -56,7 +67,7 @@ export default function CreateContact() {
       email,
       id: Math.random(),
     });
-    toast.success('contact created successfully!',{
+    toast.success("contact created successfully!", {
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,
@@ -65,13 +76,13 @@ export default function CreateContact() {
       draggable: true,
       progress: undefined,
       theme: "dark",
-    })
+    });
     setName("");
     setUsername("");
     setCompany("");
     setPhone("");
-    setCity("")
-    setStreet("")
+    setCity("");
+    setStreet("");
   };
   return (
     <div className={styles.main}>
@@ -83,7 +94,7 @@ export default function CreateContact() {
           <button className={styles.addBtn}>Add Contact</button>
         </div>
       </div>
-
+      {/* full name input box */}
       <div className={styles.form}>
         <FontAwesomeIcon icon={faUser} className={styles.profile} />
         <div>
@@ -98,11 +109,12 @@ export default function CreateContact() {
             />
             <label htmlFor="name" className="formLabel">
               Full Name
-            </label> 
-            <span>*</span>          
-          </div> 
+            </label>
+            <span>*</span>
+          </div>
         </div>
       </div>
+      {/* username input box */}
       <div className={styles.form}>
         <div>
           <div className={`${styles.wrapper} ${styles.marginLeft}`}>
@@ -120,7 +132,8 @@ export default function CreateContact() {
             <span>*</span>
           </div>
         </div>
-      </div>  
+      </div>
+      {/* email input box   */}
       <div className={styles.form}>
         <FontAwesomeIcon icon={faEnvelope} className={styles.profile} />
         <div>
@@ -153,6 +166,7 @@ export default function CreateContact() {
           </div>
         </div>
       </div>
+      {/* phone input box */}
       <div className={styles.formPhone}>
         <div className={styles.form}>
           <FontAwesomeIcon icon={faPhone} className={styles.profile} />
@@ -172,7 +186,6 @@ export default function CreateContact() {
           </div>
         </div>
       </div>
-
       <div className={styles.form}>
         <div>
           <div className={`${styles.wrapper} ${styles.marginLeft}`}>
@@ -189,7 +202,8 @@ export default function CreateContact() {
             </select>
           </div>
         </div>
-      </div>
+      </div>\
+      {/* conpany input box */}
       <div className={styles.formCompany}>
         <div className={styles.form}>
           <FontAwesomeIcon icon={faBuilding} className={styles.profile} />
@@ -212,7 +226,7 @@ export default function CreateContact() {
           </div>
         </div>
       </div>
-
+      {/* address city input box */}
       <div className={styles.formAddress}>
         <div className={styles.form}>
           <FontAwesomeIcon icon={faAddressBook} className={styles.profile} />
@@ -235,7 +249,7 @@ export default function CreateContact() {
           </div>
         </div>
       </div>
-
+     {/* address streen input box */}
       <div className={styles.form}>
         <div>
           <div className={`${styles.wrapper} ${styles.marginLeft}`}>
@@ -251,12 +265,13 @@ export default function CreateContact() {
           </div>
         </div>
       </div>
+     {/* address suite input box */}
       <div className={styles.form}>
         <div className={styles.address1}>
           <div className={`${styles.wrapper} ${styles.marginLeft}`}>
             <input
               type="text"
-              id="street"
+              id="suite"
               className={styles.formInputStreet}
               placeholder="suite"
               required
@@ -266,12 +281,13 @@ export default function CreateContact() {
           </div>
         </div>
       </div>
+      {/* address zipcode input box */}
       <div className={styles.form}>
         <div className={styles.address2}>
           <div className={`${styles.wrapper} ${styles.marginLeft}`}>
             <input
               type="text"
-              id="street"
+              id="zipcode"
               className={styles.formInputStreet}
               placeholder="zipcode"
               required
@@ -281,13 +297,13 @@ export default function CreateContact() {
           </div>
         </div>
       </div>
-
+      {/* button */}
       <div className={styles.form}>
         <button onClick={addContact} className={styles.saveBtn}>
           Save
         </button>
       </div>
-     <Footer/>
+      <Footer />
     </div>
   );
 }
