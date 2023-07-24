@@ -2,8 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { UserContext } from "../providers/UserProvider";
 
 export const useDetails = () => {
-    return useContext(UserContext);
-    
+    return useContext(UserContext);   
 }
 console.log('useDetails', useDetails)
 

@@ -26,6 +26,7 @@ const Home = () => {
 
   return (
     <div className={styles.box}>
+      <div className={styles.boxContainer}>
    
       {contacts.map((contact) => {
         return (
@@ -104,6 +105,7 @@ const Home = () => {
        
         );
       })}
+    </div>
     </div>
   );
 }

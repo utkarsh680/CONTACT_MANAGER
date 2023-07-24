@@ -1,18 +1,23 @@
-
 .box {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://img.freepik.com/free-vector/white-gray-geometric-pattern-background-vector_53876-136510.jpg?w=996&t=st=1689782689~exp=1689783289~hmac=f6843f122033eea8a9150b54e90580e737f5a9bcb9d71d977189692063cee8bf");
+  background-size: cover;
+  opacity: 0.9;
+}
+.boxContainer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   padding: 30px;
   justify-content: center;
-  background-image: url("https://img.freepik.com/free-vector/white-gray-geometric-pattern-background-vector_53876-136510.jpg?w=996&t=st=1689782689~exp=1689783289~hmac=f6843f122033eea8a9150b54e90580e737f5a9bcb9d71d977189692063cee8bf");
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.9;
-  background-position: fixed;
   margin-top: 40px;
+  height: 85%;
+  overflow-y: scroll;
+
+  
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0px;
 }
 
@@ -28,8 +33,6 @@
   position: relative;
 }
 .header {
-  
-
   position: absolute;
   column-gap: 0.8rem;
   display: flex;
@@ -63,14 +66,13 @@
   right: 0;
 }
 
-.iconm3{
- font-size: 0.6rem;
+.iconm3 {
+  font-size: 0.6rem;
 }
 
-.iconm2{
- font-size: 0.6rem;
+.iconm2 {
+  font-size: 0.6rem;
 }
-
 
 .nameUserName {
   position: absolute;
@@ -333,21 +335,21 @@
   width: 230px;
 }
 
-.delete{
+.delete {
   color: rgb(228, 112, 112);
   font-size: 1.5rem;
   position: absolute;
   right: 0px;
   padding: 15px;
   top: -55px;
-  transition: 0.2s ease ;
+  transition: 0.2s ease;
 }
-.delete:hover{
+.delete:hover {
   color: red;
   transform: scale(1.1);
   top: -52px;
 }
 
-.cityZipcode{
+.cityZipcode {
   margin-top: -12px;
 }

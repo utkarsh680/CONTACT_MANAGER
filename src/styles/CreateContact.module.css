@@ -13,9 +13,6 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
   
 }
-body{
-  background-color: rgb(25, 26, 25);
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -30,6 +27,9 @@ code {
  flex-direction: column;
  justify-content: center;
  row-gap: 2rem;
+ width: 100%;
+ height: 100%;
+ background-color: rgb(25, 26, 25);
 }
 
 .form{
