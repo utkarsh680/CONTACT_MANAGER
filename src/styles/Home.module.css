@@ -10,6 +10,7 @@
   background-repeat: no-repeat;
   opacity: 0.9;
   background-position: fixed;
+  margin-top: 40px;
 }
 ::-webkit-scrollbar{
   width: 0px;
@@ -25,9 +26,10 @@
   margin: 10px;
   color: grey;
   position: relative;
-
 }
 .header {
+  
+
   position: absolute;
   column-gap: 0.8rem;
   display: flex;

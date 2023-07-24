@@ -26,7 +26,6 @@ code {
  display: -moz-flex;
  display: -ms-flex;
  display: -o-flex;
-
  display: flex;
  flex-direction: column;
  justify-content: center;
@@ -45,7 +44,7 @@ code {
 }
 
 .profileAdd{
-  margin-top: 20px;
+  margin-top: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;

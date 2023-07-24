@@ -26,9 +26,11 @@ const Home = () => {
 
   return (
     <div className={styles.box}>
+   
       {contacts.map((contact) => {
         return (
           <div key={contact.id}>
+            
             <div className={styles.contactBox} >
               <div className={styles.contactItemBox}>
                 <div className={styles.header}>
@@ -99,6 +101,7 @@ const Home = () => {
               </div>
             </div>
           </div>
+       
         );
       })}
     </div>
