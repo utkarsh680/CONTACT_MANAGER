@@ -13,7 +13,7 @@ here we have basic functions like add data, like:
 <li>Phone</li>
 <li>Company</li>
 also, we have  delete function so:<br>
-we can easily delete any contactact from the contact list.<br>
+we can easily delete any contactact from the contact list.<br><br>
 
 click here to check: https://contact-manage-web.netlify.app/
 
