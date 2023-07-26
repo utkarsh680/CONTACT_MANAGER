@@ -5,13 +5,13 @@ here I Implementing contact-manager in React typically involves using a combinat
 In React I use Context Api.
 
 <h2>Functions </h2>
-here we have basic functions like add data, like 
-Name 
+here we have basic functions like add data, like:
+<li>Name 
 Username
 Email
 Address
 Phone
-Company
+Company</li>
 also we can easily delete any contact from contact list
 
 
