@@ -21,7 +21,7 @@ click here to check: https://contact-manage-web.netlify.app/
 ![first](https://github.com/utkarsh680/CONTACT_MANAGER/assets/102253404/ec8f2c2a-3d43-47ff-b9c1-ddad5e94cdeb)
 ![third](https://github.com/utkarsh680/CONTACT_MANAGER/assets/102253404/ce2d51da-2aac-4b0f-9f4a-6a11556beb69)
 
-![fifth](https://github.com/utkarsh680/CONTACT_MANAGER/assets/102253404/96cff9ad-67cd-430b-aab2-ec542630aad8)
+![fifth](https://github.com/utkarsh680/CONTACT_MANAGER/assets/102253404/96cff9ad-67cd-430b-aab2-ec542630aad8)<br>
 ![six](https://github.com/utkarsh680/CONTACT_MANAGER/assets/102253404/d85f1a91-9464-4b32-8eab-3801ec354232)
 
 
