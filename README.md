@@ -15,13 +15,11 @@ here we have basic functions like add data, like:
 also, we have  delete function so:<br>
 we can easily delete any contactact from the contact list.
 
-click here to check:<br>
-https://contact-manager-web.vercel.app/
+<h3>click here to check:</h3><br>
+https://contact-manage-web.netlify.app/
 
 
 
-
-# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
