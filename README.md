@@ -1,3 +1,22 @@
+#CONTACT-MANAGER
+
+CONTACT-MANAGER website help to manage user information with specific manner.
+here I Implementing contact-manager in React typically involves using a combination of HTML, CSS, and Javascript.
+In React I use Context Api.
+
+#Function
+here we have basic functions like add data, like 
+Name 
+Username
+Email
+Address
+Phone
+Company
+also we can easily delete any contact from contact list
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
