@@ -13,10 +13,10 @@ here we have basic functions like add data, like:
 <li>Phone</li>
 <li>Company</li>
 also, we have  delete function so:<br>
-we can easily delete any contactact from the contact list.
+we can easily delete any contactact from the contact list.<br>
 
-<p>click here to check:</p>
-https://contact-manage-web.netlify.app/
+<p>click here to check:</p>https://contact-manage-web.netlify.app/
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
