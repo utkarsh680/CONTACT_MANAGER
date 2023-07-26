@@ -13,7 +13,10 @@ here we have basic functions like add data, like:
 <li>Phone</li>
 <li>Company</li>
 also, we have  delete function so:<br>
-we can easily delete any contactact from the contact list
+we can easily delete any contactact from the contact list.
+
+click here to check:<br>
+https://contact-manager-web.vercel.app/
 
 
 
