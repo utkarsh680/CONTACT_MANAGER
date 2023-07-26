@@ -6,12 +6,12 @@ In React I use Context Api.
 
 <h2>Functions </h2>
 here we have basic functions like add data, like:
-<li>Name 
-Username
-Email
-Address
-Phone
-Company</li>
+<li>Name</li> 
+<li>Username</li>
+<li>Email</li>
+<li>Address</li>
+<li>Phone</li>
+<li>Company</li>
 also we can easily delete any contact from contact list
 
 
