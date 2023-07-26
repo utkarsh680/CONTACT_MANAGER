@@ -15,7 +15,7 @@ here we have basic functions like add data, like:
 also, we have  delete function so:<br>
 we can easily delete any contactact from the contact list.
 
-<h3>click here to check:</h3><br>
+<h3>click here to check:</h3>
 https://contact-manage-web.netlify.app/
 
 
