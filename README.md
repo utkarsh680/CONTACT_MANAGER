@@ -1,10 +1,10 @@
-CONTACT-MANAGER
+<h1>CONTACT-MANAGER</h1>
 
 CONTACT-MANAGER website help to manage user information with specific manner.
 here I Implementing contact-manager in React typically involves using a combination of HTML, CSS, and Javascript.
 In React I use Context Api.
 
-Functions
+<h2>Functions </h2>
 here we have basic functions like add data, like 
 Name 
 Username
