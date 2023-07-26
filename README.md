@@ -12,7 +12,8 @@ here we have basic functions like add data, like:
 <li>Address</li>
 <li>Phone</li>
 <li>Company</li>
-also we can easily delete any contact from contact list
+also, we have  delete function so:<br>
+we can easily delete any contactact from the contact list
 
 
 
