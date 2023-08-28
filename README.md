@@ -1,21 +1,21 @@
-<h1>Ecommerce React App</h1>
+<h1>CONTACT-MANAGER</h1>
 
-The eCommerce React app allows users to browse and purchase products online. It includes features like fetching, adding, deleting, and updating products in the database. Users can add products to their cart and wishlist, and proceed to checkout to purchase their items.
+CONTACT-MANAGER website help to manage user information with specific manner.
+here I Implementing contact-manager in React typically involves using a combination of HTML, CSS, and Javascript.
+In React I use Context Api.
 
-<p>Here is the JSON server for products - https://my-json-server.typicode.com/singh233/JSON-Server</p>
-<h2>Demo</h2>
-https://singh233.github.io/Ecommerce-React-App/ 🚀
+<h2>Functions </h2>
+here we have basic functions like add data, like:
+<li>Name</li> 
+<li>Username</li>
+<li>Email</li>
+<li>Address</li>
+<li>Phone</li>
+<li>Company</li>
+also, we have  delete function so:<br>
+we can easily delete any contactact from the contact list.<br><br>
 
-<h2>Features</h2>
-
-<li>Browse through Products 🛍️</li> 
-<li>Add new Producte</li>
-<li>Update Product</li>
-<li>Delete Product 🗑️</li>
-<li>Wishlist Item</li>
-<li>Responsive for Desktop 🖥️ and Mobile devices 📱</li>
-Start the server
-<div style ={height: auto, width: auto, padding: 10px, background-color:grey}>npm run dev</div>
+click here to check: https://contact-manage-web.netlify.app/
 ![first](https://github.com/utkarsh680/CONTACT_MANAGER/assets/102253404/ec8f2c2a-3d43-47ff-b9c1-ddad5e94cdeb)
 ![third](https://github.com/utkarsh680/CONTACT_MANAGER/assets/102253404/ce2d51da-2aac-4b0f-9f4a-6a11556beb69)
 
